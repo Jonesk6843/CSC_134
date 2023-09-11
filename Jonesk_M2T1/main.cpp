@@ -1,3 +1,7 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
 /*
 CSC 134
 M2T1 - receipt calculator
@@ -5,10 +9,6 @@ Kent Jones
 9/6/23
 This program will simulate a simple receipt calculator for the bill from a restaurant
 */
-#include <iostream>
-#include <iomanip>
-using namespace std;
-
 int main()
 {
 

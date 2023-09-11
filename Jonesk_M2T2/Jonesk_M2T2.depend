@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1694445256 source:f:\dev\github\csc_134\jonesk_m2t2\main.cpp
+	<iostream>
+	<iomanip>
+
