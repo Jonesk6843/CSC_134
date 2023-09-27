@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1695829660 source:f:\z. dev\github\csc_134-cplusplus\jonesk_m3hw1 (q3)\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+
