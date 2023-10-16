@@ -1,0 +1,47 @@
+# notes for Fall Game Jam
+Game name: Mikey "Rattlebones" Jones: The Skeleton Farmer
+Project Type: Ren'Py story application
+Characters: Mikey
+	    Old Straw the Scarecrow
+	    Farmer John (antagonist)
+            side characters...
+
+The game progresses through different seasons (Starts in Fall/Witer/Spring/ and ends in Summer. 
+The player must make decisions about how to adapt the farm to each season, impacting the types of crops, challenges, and events that occur.
+Branching paths
+----------------
+1. Farmer John (Fall)
+Farmer John, driven by greed, confronts Mikey with an ultimatum to sell his land at a fraction of its worth.
+Branch A: negotiate
+Branch B: resist
+* The chosen path could lead to a game over for the player.
+
+*These choices will affect Mikey's reputation and the game's overall storyline.
+
+3. Harvest Festival (Fall)
+It's time for the annual Harvest Festival, and Mikey has the chance to showcase his produce.
+Branch A: Mikey chooses to stay hidden, avoiding the festival, fearing that his true identity might be revealed.
+Branch B: Mikey decides to attend the festival, wearing a clever disguise.
+* The outcome will affect his farm's reputation in the community.
+	1A. Competition
+	Mikey enters in the festival competition and must determine which produce he should put on display.
+	Branch A: Squash
+	Branch B: Pumpkin
+
+4. The Ghostly Neighbor (Winter)
+Mikey's farm has an old, supposedly haunted barn. The player can choose to investigate it or leave it alone.
+Branch A: Explore
+Branch B: Ignore
+* Exploring the barn could reveal secrets about the farm's history, skeletons, and unexpected encounters.
+
+5. The last straw (Summer)
+After multiple confrontations, Mikey and John's feud reaches a boiling point.
+Branch A: Mikey Shows is true nature
+Branch B: challenge John to a farming competition
+* The chosen path could lead to a primary ending
+
+Endings
+-------
+End 1: Mikey's farm fails and begrugingly goes back to Bone Hollow to face ridicule.
+(Prim.) End 2: Mikey discovers that he's better off as a scary skeleton than a farmer. Leaves back to Bone Hollow, although with a new face, still feels empty...
+(Prim.) End 3: Mikey's farm is a huge success and everyone loves his farm and produce.
