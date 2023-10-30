@@ -1,54 +1,80 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
+﻿# Declare characters used by this game.
 define MJ = Character("Mikey \"Rattlebones\" Jones")
 define OS = Character("Old Straw, The Scarecrow")
 define LF = Character("Lenny Frostnose")
+define FJ = Character("Farmer John")
 
 #Declare music
 define audio.gamemusic = "audio/teller-of-the-tales-by-kevin-macleod-from-filmmusic-io.mp3"
 
-# The game starts here.
+# Declaring transforms
+transform stageLeft:
+    xalign 0.0
+    yalign 1.0
+transform stageLeftish:
+    xalign 0.25
+    yalign 1.0
+transform stageRight:
+    xalign 1.0
+    yalign 1.0
+transform stageRightish:
+    xalign 0.75
+    yalign 1.0
+transform centerStage:
+    xalign 0.5
+    yalign 1.0
 
+# =============!The game starts here!=============
 label start:
+    #INTRODUCTION
     play music gamemusic
+    "What if I were to tell you that there was a skeleton that wished to be a farmer."
+    "Such a wild story you may say."
+    "But the tale that I am about to tell you is all but true."
+    "If one were to wander too far from the farming villages and walk deep enough into the forest you may find yourself in"
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    #SHOW BONE HOLLOW
+    "BONE HOLLOW!"
+    "Bone Hollow is a spooky town where skeletons live and thrive. It's surrounded by a thick fog that makes it hard to see anything beyond the graveyard gates." 
+    "The skeletons are friendly and cheerful, but they have a bone to pick with anyone who tries to disturb their peace."
 
+    #SEASON: FALL
     scene bg farm
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
     show mikey
-
-    # These display lines of dialogue.
-
     MJ "Howdy! The names' Mikey!"
-
     MJ "What Can I do ya for?"
-
     menu:
-        "How's the farm?":
-            "It's goin' great! Thanks for askin!"
-        "Where's old straw?":
-            hide mikey
+        "Check the fields":
+            MJ "That ought to be a good idea!"
             scene bg field
             show old straw
-            OS "I haven't gone anywhere..."
-        "Is your barn haunted?!":
-            hide mikey
-            scene bg barn interior
-            show lenny
-            LF "N-No it's not..."
-
-    MJ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat erat libero, ac feugiat diam pharetra tincidunt. Nullam tellus sem, semper sit amet tincidunt ac, dapibus at mauris. "
-    MJ "Donec sit amet placerat risus. Nulla facilisi. Sed maximus nisi et nulla facilisis luctus. Proin velit purus, volutpat id lectus sed, scelerisque fringilla velit."
-    # This ends the game.
-
+            OS "Howdy..."
+            MJ "Well, rattle my bones! You can talk?!"
+            OS "I should be asking you the same thing..."
+        "Check out the village":
+            MJ "Here's hopin' they like me..."
+        "Gander at the farm"
+    #SEASON: WINTER
+    #INTERACTION WITH FROST NOSE
+    scene bg barn interior
+    show mikey at stageLeftish
+    show lenny at stageRightish
+    menu:
+        "Wh-who are you?!":
+            LF "W-Well, my name's Lenny. The former owner of this farm your taking."
+        "WAH! A G-GHOST!":
+            LF "W-Wait...y-your scared of...me?"
+            MJ "Darn tootin'! I've never seen a ghost before!"
+            LF "B-But you're a skeleton"
+            MJ "Yeah. What's your point?"
+            LF "..."
+            MJ "..."
+            LF "Nothing."
+    #SEASON: SPRING
+    #SPRING HARVEST EVENT
+    #SEASON: SUMMER
+    
+    "And that the story of Mikey \"Rattlebones\" Jones. The skeleton who became a farmer."
+    
+    # =============!This ends the game!=============
     return
