@@ -35,7 +35,7 @@ label start:
     "But the tale that I am about to tell you is all but true."
     "If one were to wander too far from the farming villages and walk deep enough into the forest you may find yourself in"
 
-    # SHOW BONE HOLLOW
+    scene bg boneHollow
     "BONE HOLLOW!"
     "Bone Hollow is a spooky town where skeletons live and thrive. It's surrounded by a thick fog that makes it hard to see anything beyond the graveyard gates." 
     "The skeletons are rash and michevious, having a bone to pick with just about anyone who tries to disturb their peace."
@@ -81,21 +81,68 @@ label start:
         "Check out the village":
             MJ "Here's hopin' they like me..."
         "Gander at the farm"
+    FJ "Hey!"
+    MJ "Huh?"
+    "An angry farmer stomps towards Mikey."
+    show john at stageLeftish
+    show mikey at stageRightish
+    FJ "What's a bag of bones doing on my farm?!"
+    MJ "Your farm? I'm sorry sir, I think you got the wrong-"
+    FJ "Don't you lie to me."
+    "The farmer points at a ricktiy fence, which was falling apart and being held together by chicken wire."
+    FJ "That 'dere is my land and you're truding over it."
+    MJ "If that's the case, that'll only leave me twenty-five acres! I can't run a farm with that size."
+    FJ "You don't even got a body or organs to work with and you're still runnin'. You'll be just fine."
+    FJ "So what will it be?"
+    
     # First decision should be to either give half the land to Farmer John or decline. Giving in will result in a game over.
     menu:
         "Give some land. Don't want to cause any trouble":
-            "WIP"  
+            MJ "I-I guess you're right about that "  
+            "And that's the sad tale of Mikey \"the supposed\" skeleton farmer."
+            "But that doesn't sound right...maybe I'm remembering the story wrong...who knows..."
+            "This story is infact, old as bones..."
+            "THE END?"
+            return 
         "This is my share! Step off!":
             "WIP"  
  
     # ===SEASON: WINTER===
+    scene bg farmsnow
+    show mikey at centerStage
+    MJ "BRRR! It's a little nippy out today! The cold is practically rattling my bones!"
+    MJ "Oh, shucks! I may be cold, but what about the horses or the cows?! They must be freezin' their tails off."
+    OS "Be careful, son."
+    MJ "Old straw?"
+    show old straw at stageLeft
+    show mikey at stageRightish
+    "Old straw shakes off some of the snow from his hat."
+
+    MJ "What are you doing out here? I thought you'd take shelter from the snow."
+    OS "A scarecrow's job ain't never done, Mike. Beside...i'm sort of nailed here..."
+    MJ "Oh...right."
+    MJ "A-Anyways. You were saying something about \"being careful\? Careful of what?"
+    OS "The ghost of little Lenny."
+        # Insert bone rattle sound effect
+    "Mikey bones rattled in fear."
+    MJ "G-Ghosts?!"
+    OS "You're afraid of ghost? Ain't scarin' a skeletons whole shtick?"
+    MJ "I-I was never good at scarin'..."
+    OS "That's a shame. At least you got a green thumb."
+    OS "Long ago they say a farmer by the name of Lenny Frostnose owned this very farm."
+    OS "Poor buddy forgot to put his tractor in park and well..."
+    show bg deadFarmer
+    OS "The thing crushed Lenny and dragged him into that 'dere barn in the process."
+    OS "Ever since that, rumors began go around that poor Lenny's soul still wanders in that barn."
+
     # INTERACTION WITH FROST NOSE
     scene bg barn interior
     show mikey at stageLeftish
     show lenny at stageRightish
     menu:
-        "Wh-who are you?!":
-            LF "W-Well, my name's Lenny. The former owner of this farm your taking."
+        "L-Lenny?":
+            LF "H-Hey...you know my name?"
+            MJ "Yeah...Old straw told me about you and your sad story."
         "WAH! A G-GHOST!":
             LF "W-Wait...y-your scared of...me?"
             MJ "Darn tootin'! I've never seen a ghost before!"
@@ -106,7 +153,8 @@ label start:
             LF "Nothing."
     menu: # Second decision should be to either to tell Frostnose to leave or let him stay. Telling him to leave will result in a negative consequence
         "Tell him to leave":
-            "WIP"
+            LF "Wh-what?!"
+            MJ ""
         "Let him stay":
             "WIP"
 
@@ -125,6 +173,8 @@ label start:
 
     # ===SEASON: SUMMER===
     scene bg field
+    show mikey at stageLeftish
+    show john at stageRightish
     menu: # Final decision should be to either to show your true skeleton self or keep working. Either choice will result in a different ending. 
         "Scare John":
             "WIP"
