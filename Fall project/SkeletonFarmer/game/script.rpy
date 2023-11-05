@@ -512,8 +512,8 @@ label start:
                     "Mikey hurringly walked up the steps."
                     "Once on stage, Mikey could get a good look at the mass of villagers and farmers that had gathered, clapping and congratulating him."
                     "It was truly a sight to behold that he would treasure."
-                    show mikey at stageLeftish
-                    show mayor at stageRightish
+                    show mikey at stageLeft
+                    show mayor at stageRight
                     Mayor "Well aren't you a sight to behold! A skeleton farmer managed to produce a giant pumpkin that weighed over 500 pounds!"
                     Mayor "What do you have to say about that!"
                     Mikey "That's a \"skele\"-ton of pounds!"
@@ -630,6 +630,12 @@ label start:
             "Tell him off":
                 jump biggermanEnding
     label scaryEnding:
+        stop music
+        "Mikey was at his boiling point."
+        "In a fit of rage, Mikey let out a bone chilling screech."
+        play sound "mikeyscream.mp3"
+        "John face turned pale and he let out a scream of terror. Running off to his farm."
+        play sound "johnscream.mp3"
         play music "dead-silence.mp3"
         hide john
         show mikey at centerStage
